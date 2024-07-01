@@ -2,13 +2,14 @@
 
 import process from 'process'
 import {program} from 'commander'
-import fs from 'fs-extra'
 import path from 'path'
 import {ifExistDir} from '../utils/exist.js'
 import {inquirerPrompt} from '../utils/inquirer.js'
 import {clone} from '../utils/clone.js'
 import {removeGitDir} from '../utils/remove.js'
+import {replaceInFiles} from '../utils/replace.js'
 import {donePrint, logoPrint, abortPrint} from '../utils/print.js'
+import {REMOTE, BRANCH_MAP} from '../utils/repo.js'
 
 // 首行提示
 program.name('@ej/cli').usage('<command> [option]')
@@ -25,23 +26,25 @@ program
   .action(async function (appName) {
     const currentPath = process.cwd()
     const targetPath = path.join(currentPath, appName)
-    
+    let inquirerAnswers
+
     const tasks = [
       () => ifExistDir(targetPath).catch(() => abortPrint()),
-      () => inquirerPrompt().catch(() => false),
+      () => inquirerPrompt().then((res) => inquirerAnswers = res).catch(() => false),
       () => clone({
-        repo: 'git@gitlab.jinxin.dev:ej-dr/sgda/ucard/ucard-webapp.git',
+        repo: REMOTE,
         appName,
-        branchName: 'dev'
+        branchName: BRANCH_MAP['vite-vue3-leaf-auth']
       }).catch(() => false),
       () => removeGitDir(targetPath).catch(() => false),
+      () => replaceInFiles(targetPath, 'p1demo', inquirerAnswers.baseName).catch(() => false),
       () => donePrint(appName),
     ]
     for (let i = 0; i < tasks.length; i++) {
       const taskRes = await tasks[i]()
       if (!taskRes) break
     }
-    // console.log(inquirerArgs);
+    // console.log(inquirerAnswers)
   })
 
 // help提示

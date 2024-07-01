@@ -1,9 +1,17 @@
 {
   "name": "ej-cli",
   "version": "0.0.0",
-  "description": "",
-  "scripts": {},
+  "description": "The recommended way to start a webapp for DFJX",
+  "scripts": {
+    "test": "pnpm -F example run help"
+  },
   "keywords": [],
-  "author": "Zhongxu Yang",
-  "license": "ISC"
+  "author": "ZhongxuYang <himatthew@foxmail.com>",
+  "license": "MIT",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZhongxuYang/ej-cli.git"
+  },
+  "homepage": "https://github.com/ZhongxuYang/ej-cli"
 }

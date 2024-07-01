@@ -8,11 +8,9 @@ function abortPrint() {
 function donePrint(appName) {
   console.log('\n')
   console.log('Done, now run:')
-  console.log('\n')
   console.log(chalk.green.bold(` cd ${appName}`))
   console.log(chalk.green.bold(' pnpm install'))
   console.log(chalk.green.bold(' pnpm dev'))
-  console.log('\n')
   return Promise.resolve(true)
 }
 

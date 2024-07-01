@@ -5,7 +5,11 @@
   "type": "module",
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
+  "scripts": {
+    "help": "pnpm ej help",
+    "clear": "node clear.js"
+  },
   "dependencies": {
     "@ej/cli": "workspace:*"
   }
