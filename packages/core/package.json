@@ -17,6 +17,9 @@
   "keywords": [
     "@ej/cli"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {},
   "dependencies": {
     "chalk": "^5.3.0",

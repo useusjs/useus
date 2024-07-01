@@ -42,7 +42,7 @@
 ## Publish
 
 ```sh
-pnpm publish --F @ej/cli
+pnpm publish -F @ej/cli
 ```
 
 ## 相关
