@@ -1,14 +1,14 @@
 {
-  "name": "@ej/cli",
+  "name": "@useus/ej-cli",
   "version": "0.0.1",
   "description": "The recommended way to start a webapp for DFJX",
   "author": "ZhongxuYang <himatthew@foxmail.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ZhongxuYang/ej-cli.git"
+    "url": "git+https://github.com/ZhongxuYang/useus.git"
   },
-  "homepage": "https://github.com/ZhongxuYang/ej-cli",
+  "homepage": "https://github.com/ZhongxuYang/useus",
   "type": "module",
   "main": "index.js",
   "bin": {

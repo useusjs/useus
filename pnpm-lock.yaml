@@ -8,13 +8,7 @@ importers:
 
   .: {}
 
-  examples:
-    dependencies:
-      '@ej/cli':
-        specifier: workspace:*
-        version: link:../packages/core
-
-  packages/core:
+  packages/ej-cli:
     dependencies:
       chalk:
         specifier: ^5.3.0
@@ -37,6 +31,12 @@ importers:
       ora:
         specifier: ^8.0.1
         version: 8.0.1
+
+  playground/ej-cli:
+    dependencies:
+      '@useus/ej-cli':
+        specifier: workspace:*
+        version: link:../../packages/ej-cli
 
 packages:
 

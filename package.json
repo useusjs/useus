@@ -1,7 +1,7 @@
 {
-  "name": "ej-cli",
+  "name": "@useus/monorepo",
   "version": "0.0.0",
-  "description": "The recommended way to start a webapp for DFJX",
+  "description": "",
   "scripts": {
     "test": "pnpm -F example run help"
   },
@@ -11,7 +11,7 @@
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ZhongxuYang/ej-cli.git"
+    "url": "git+https://github.com/ZhongxuYang/useus.git"
   },
-  "homepage": "https://github.com/ZhongxuYang/ej-cli"
+  "homepage": "https://github.com/ZhongxuYang/useus"
 }

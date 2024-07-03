@@ -1,5 +1,5 @@
 {
-  "name": "example",
+  "name": "ej-cli",
   "version": "1.0.0",
   "description": "",
   "type": "module",
@@ -11,6 +11,6 @@
     "clear": "node clear.js"
   },
   "dependencies": {
-    "@ej/cli": "workspace:*"
+    "@useus/ej-cli": "workspace:*"
   }
 }
